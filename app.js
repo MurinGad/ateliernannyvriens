@@ -4,7 +4,7 @@
    ========================================================= */
 const SITE = {
   contact: { naam: "Floris Janssen", rol: ["kleinzoon van Nanny", "Nanny's grandson"], tel: "+31 6 13369666", whatsapp: "31613369666", email: "info@fluringroup.com" },
-  verkoper: { naam: "", adres: "", kvk: "", handelsnaam: "Modern Art Lease & Sale" } // invullen: naam van opa, adres, KvK-nummer
+  verkoper: { naam: "Peter Vriens", adres: "", kvk: "", handelsnaam: "Modern Art Lease & Sale" } // invullen: naam van opa, adres, KvK-nummer
 };
 const META = {
   /* Titels en maten van haar eigen website (nannyvriens.nl). Maten: breedte × hoogte in cm. Bij tweeluiken: maat per paneel. */
