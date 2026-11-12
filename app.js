@@ -68,7 +68,7 @@ const desc = w => L(w.d, w.e);
 const status = id => M(id).status || "beschikbaar";
 const fmtEUR = n => "€ " + Number(n).toLocaleString("nl-NL");
 const dimText = id => { const m=M(id); if(!m.w||!m.h) return null; return m.panelen ? `${m.panelen} × ${m.w} × ${m.h} cm` : `${m.w} × ${m.h} cm`; };
-const T = id => `img/t/NV-${id}.jpg`, LG = id => `img/l/NV-${id}.jpg`;
+const IMGV = "20261112b", T = id => `img/t/NV-${id}.jpg?v=${IMGV}`, LG = id => `img/l/NV-${id}.jpg?v=${IMGV}`;
 const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const wa = txt => SITE.contact.whatsapp ? `https://wa.me/${SITE.contact.whatsapp}?text=${encodeURIComponent(txt)}` : null;
 const firstName = SITE.contact.naam.split(" ")[0];
