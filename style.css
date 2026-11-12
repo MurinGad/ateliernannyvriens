@@ -178,6 +178,7 @@ section{padding-block:clamp(56px,8vw,112px)}
 .info .artist{margin-top:10px;color:var(--ink-2)}
 .tnote{font-size:12px;color:var(--ink-3);margin-top:6px}
 .story{font:400 clamp(18px,1.4vw,20px)/1.6 var(--serif);margin-top:22px}
+.soul{font:italic 400 clamp(17px,1.3vw,19px)/1.65 var(--serif);color:var(--ink-2);margin-top:18px;padding-left:18px;border-left:1px solid var(--line)}
 .dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 24px;margin:28px 0 0;padding-top:22px;border-top:1px solid var(--line);font-size:14px}
 .dl dt{color:var(--ink-2)}
 .dl dd{margin:0}
