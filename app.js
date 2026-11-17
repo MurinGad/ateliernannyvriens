@@ -549,7 +549,7 @@ const vPrivacy = () => `
   <h2>${L("Welke gegevens en waarvoor","Which data and why")}</h2><p>${L("Wij gebruiken alleen wat u zelf aan ons doorgeeft: uw naam, contactgegevens, adres voor bezorging en uw berichten. Dat doen we om uw aanvraag te beantwoorden, een werk te bezorgen of op te hangen, en om een factuur op te stellen.","We only use what you give us yourself: your name, contact details, delivery address and your messages. We use them to answer your enquiry, deliver or hang a work, and draw up an invoice.")}</p>
   <h2>${L("Hoe lang","How long")}</h2><p>${L("Facturen bewaren we zeven jaar, omdat de wet dat vraagt. Andere gegevens verwijderen we uiterlijk een jaar na het laatste contact.","Invoices are kept for seven years as required by law. Other data is deleted no later than one year after our last contact.")}</p>
   <h2>${L("Delen","Sharing")}</h2><p>${L("Wij verkopen of delen uw gegevens niet. Stuurt u ons een bericht via WhatsApp, dan loopt dat via de dienst van WhatsApp (Meta).","We do not sell or share your data. If you message us on WhatsApp, this runs through WhatsApp's service (Meta).")}</p>
-  <h2>${L("Deze website","This website")}</h2><p>${L("Deze website gebruikt geen trackingcookies. Uw bewaarde werken en taalkeuze worden alleen in uw eigen browser opgeslagen.","This website uses no tracking cookies. Your saved works and language choice are stored only in your own browser.")}</p>
+  <h2>${L("Deze website","This website")}</h2><p>${L("Deze website gebruikt geen cookies. Bezoeken tellen wij anoniem met GoatCounter, zonder cookies en zonder persoonsgegevens. Uw bewaarde werken en taalkeuze worden alleen in uw eigen browser opgeslagen.","This website uses no cookies. We count visits anonymously with GoatCounter, without cookies or personal data. Your saved works and language choice are stored only in your own browser.")}</p>
   <h2>${L("Uw rechten","Your rights")}</h2><p>${L("U kunt ons altijd vragen uw gegevens in te zien, te corrigeren of te verwijderen. Bent u niet tevreden, dan kunt u een klacht indienen bij de Autoriteit Persoonsgegevens.","You may always ask us to view, correct or delete your data. If you are not satisfied, you can file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).")}</p>
   </div></div>`;
 
@@ -559,7 +559,8 @@ const vNotFound = () => `<div class="page-head"><div class="wrap"><h1 class="dis
 const app=document.getElementById("app");
 let current="";
 function setMenu(open){ const m=document.getElementById("menu"); m.hidden=!open; document.body.classList.toggle("menu-open",open); document.getElementById("menuBtn").setAttribute("aria-expanded",open); }
-function route(keepScroll){
+function track(n=0){ try{ if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:location.pathname+(location.hash||""),title:document.title}); else if(window.goatcounter&&n<20) setTimeout(()=>track(n+1),500); }catch(e){} }
+function route(keepScroll){ setTimeout(track,400);
   const h=(location.hash||"").slice(1) || (window.PRESET||"");
   if(current==="collectie") S.scroll.collectie=window.scrollY;
   let html, after=null;
