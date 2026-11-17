@@ -8,7 +8,7 @@ const SITE = {
 };
 const META = {
   /* Titels en maten van haar eigen website (nannyvriens.nl). Maten: breedte × hoogte in cm. Bij tweeluiken: maat per paneel. */
-  "136":{titel:"The Big Apple",w:100,h:100,lijst:"3D-lijst"},
+  "136":{titel:"The Big Apple",w:100,h:100,lijst:"3D-lijst",status:"verkocht"},
   "079":{titel:"De Bouwplaats",w:100,h:100,lijst:"3D-lijst"},
   "060":{titel:"Part of the River",w:100,h:100,lijst:"3D-lijst"},
   "059":{titel:"The Canyon",w:100,h:100,lijst:"3D-lijst"},
